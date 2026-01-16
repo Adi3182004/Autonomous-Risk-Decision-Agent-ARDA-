@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Console</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h2>Employee Activity Simulator</h2>
+
+    <div class="actions">
+      <button onclick="send('LOGIN')">LOGIN</button>
+      <button onclick="send('FILE_READ')">FILE READ</button>
+      <button onclick="send('FILE_WRITE')">FILE WRITE</button>
+      <button class="danger" onclick="send('PRIV_ESC')">PRIV ESC</button>
+    </div>
+
+    <script src="./employee.js"></script>
+  </body>
+</html>

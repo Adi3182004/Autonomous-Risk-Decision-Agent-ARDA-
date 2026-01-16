@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* Top Bar */
+.topbar {
+  padding: 16px 24px;
+  border-bottom: 1px solid #1e293b;
+  background: #020617;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.topbar span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.stat {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.stat span {
+  display: block;
+  font-size: 28px;
+  margin-top: 6px;
+}
+
+.critical {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+.warning {
+  background: #92400e;
+  color: #fde68a;
+}
+
+.safe {
+  background: #065f46;
+  color: #bbf7d0;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  height: calc(100vh - 170px);
+}
+
+#dashboard {
+  flex: 1;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+}
+
+#timeline-panel {
+  width: 35%;
+  padding: 20px;
+  border-left: 1px solid #1e293b;
+  background: #020617;
+  overflow-y: auto;
+}
+
+/* Cards */
+.card {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.card:hover {
+  border-color: #38bdf8;
+}
+
+.user {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.meta {
+  font-family: monospace;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.Critical {
+  background: #dc2626;
+}
+
+.Medium {
+  background: #facc15;
+  color: #000;
+}
+
+.Low {
+  background: #22c55e;
+}
+
+/* Decision */
+.decision {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.LOCK {
+  background: #7f1d1d;
+}
+
+.RESTRICT {
+  background: #92400e;
+}
+
+.WARN {
+  background: #065f46;
+}
+
+/* Timeline */
+.log {
+  padding: 6px;
+  font-size: 12px;
+  border-bottom: 1px solid #1e293b;
+  font-family: monospace;
+}
+
+.PRIV_ESC {
+  color: #ef4444;
+}
+
+.FILE_WRITE {
+  color: #38bdf8;
+}
+
+.LOGIN {
+  color: #22c55e;
+}
+
+.sensitive {
+  color: #f59e0b;
+}
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0px red;
+  }
+  50% {
+    box-shadow: 0 0 15px red;
+  }
+  100% {
+    box-shadow: 0 0 0px red;
+  }
+}

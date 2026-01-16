@@ -1,0 +1,16 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arda-backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./ui
+    container_name: arda-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend

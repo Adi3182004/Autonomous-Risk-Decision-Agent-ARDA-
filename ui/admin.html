@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARDA | SOC Dashboard</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>ARDA – Insider Threat Command Center</h1>
+      <span>Live Behavioral Risk Monitoring</span>
+    </header>
+
+    <section class="stats">
+      <div class="stat critical">
+        CRITICAL <span id="criticalCount">0</span>
+      </div>
+      <div class="stat warning">WARNING <span id="warningCount">0</span></div>
+      <div class="stat safe">SAFE <span id="safeCount">0</span></div>
+    </section>
+
+    <main class="layout">
+      <section id="dashboard"></section>
+      <aside id="timeline-panel">
+        <h2>Timeline Replay</h2>
+        <div id="timeline">Select an incident</div>
+      </aside>
+    </main>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
